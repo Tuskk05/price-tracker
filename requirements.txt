@@ -9,3 +9,5 @@ python-dotenv
 pytest
 black
 watchdog
+fastapi
+uvicorn
