@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  price-tracker:
+    build: .
+    container_name: price_tracker_pro
+    restart: unless-stopped
+    ports:
+      - "8501:8501"  # Opens the port
+    volumes:
+      - ./data:/app/data  # Saves database in local
+      - ./logs:/app/logs
+      - ./.env:/app/.env
+    environment:
+      - TZ=Europe/Barcelona  # Configures timezones
