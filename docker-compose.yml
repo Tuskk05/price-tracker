@@ -6,7 +6,8 @@ services:
     container_name: price_tracker_pro
     restart: unless-stopped
     ports:
-      - "8501:8501"  # Opens the port
+      - "8501:8501"   # Opens the ports
+      - "8000:8000"
     volumes:
       - ./data:/app/data  # Saves database in local
       - ./logs:/app/logs
